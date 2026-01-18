@@ -1,0 +1,18 @@
+{
+  "name": "github-apps-webhook-add-label",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "npm run build && probot run ./dist/index.js",
+    "start": "node ./dist/server.js"
+  },
+  "dependencies": {
+    "probot": "^14.2.4"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.9",
+    "typescript": "^5.9.3"
+  }
+}
