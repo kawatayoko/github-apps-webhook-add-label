@@ -9,6 +9,7 @@
     "start": "node ./dist/server.js"
   },
   "dependencies": {
+    "jsonwebtoken": "^9.0.3",
     "probot": "^14.2.4"
   },
   "devDependencies": {

@@ -13,6 +13,33 @@ export default (app: Probot) => {
       "pull_request.reopened",
     ],
     async (context) => {
+      // ===== DEBUG: ここから =====
+    //   try {
+    //     const installationId = context.payload.installation?.id;
+    //     const { data: appInfo } = await context.octokit.request("GET /app");
+    //     context.log.info(
+    //       {
+    //         appId: appInfo?.id,
+    //         slug: appInfo?.slug,
+    //         installationId,
+    //         repo: context.payload.repository.full_name,
+    //       },
+    //       "debug identity"
+    //     );
+
+    //     const { data: installs } = await context.octokit.request("GET /app/installations");
+    //     context.log.info(
+    //       { installationIds: installs.map((i: any) => i.id) },
+    //       "debug installations visible to this app"
+    //     );
+    //   } catch (e: any) {
+    //     context.log.error(
+    //       { status: e?.status, message: e?.message, name: e?.name },
+    //       "debug failed"
+    //     );
+    //   }
+      // ===== DEBUG: ここまで =====
+
       const pr = context.payload.pull_request;
       const owner = context.payload.repository.owner.login;
       const repo = context.payload.repository.name;
